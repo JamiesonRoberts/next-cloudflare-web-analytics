@@ -1,0 +1,3 @@
+import CloudflareWebAnalyticsProvider from './lib/CloudflareWebAnalyticsProvider'
+
+export default CloudflareWebAnalyticsProvider
