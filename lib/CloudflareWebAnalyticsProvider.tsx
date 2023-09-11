@@ -6,7 +6,7 @@ const cloudflareBeaconUrl: string =
 
 export default function CloudflareWebAnalyticsProvider(props: {
     token: string
-    spaDisable?: boolean
+    spaIsDisable?: boolean
     enabled?: boolean
     children?: ReactNode | ReactNode[]
     scriptProps?: React.DetailedHTMLProps<
@@ -26,10 +26,12 @@ export default function CloudflareWebAnalyticsProvider(props: {
                 <Script
                     src={`${cloudflareBeaconUrl}?${[
                         `token=${props.token}`,
-                        props.spaDisable ? 'spa=false' : null,
+                        props.spaIsDisable ? 'spa=false' : null,
                     ].join('&')}`}
+                    {...props.scriptProps}
                 />
             )}
+            {props.children}
         </>
     )
 }
