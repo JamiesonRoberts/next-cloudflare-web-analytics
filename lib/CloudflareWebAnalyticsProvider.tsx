@@ -5,10 +5,22 @@ const cloudflareBeaconUrl: string =
     'https://static.cloudflareinsights.com/beacon.min.js'
 
 export default function CloudflareWebAnalyticsProvider(props: {
+    /**
+     * The Cloudflare Web Analytics token provided by Cloudflare
+     */
     token: string
-    spaIsDisable?: boolean
+    /**
+     * Set this to true to disable measuring SPA's as described in https://developers.cloudflare.com/analytics/web-analytics/getting-started/web-analytics-spa/
+     */
+    spaIsDisabled?: boolean
+    /**
+     * Use this to explicitly decide whether to render script. If not passed the script will only be rendered in production environments.
+     */
     enabled?: boolean
     children?: ReactNode | ReactNode[]
+    /**
+     * Optionally override any of the props passed to the script element, including but not limited to Next.js Script props
+     */
     scriptProps?: React.DetailedHTMLProps<
         React.ScriptHTMLAttributes<HTMLScriptElement>,
         HTMLScriptElement
@@ -26,8 +38,10 @@ export default function CloudflareWebAnalyticsProvider(props: {
                 <Script
                     src={`${cloudflareBeaconUrl}?${[
                         `token=${props.token}`,
-                        props.spaIsDisable ? 'spa=false' : null,
-                    ].join('&')}`}
+                        props.spaIsDisabled ? 'spa=false' : null,
+                    ]
+                        .filter(Boolean)
+                        .join('&')}`}
                     {...props.scriptProps}
                 />
             )}
