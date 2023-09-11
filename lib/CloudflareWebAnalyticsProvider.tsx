@@ -17,7 +17,6 @@ export default function CloudflareWebAnalyticsProvider(props: {
      * Use this to explicitly decide whether to render script. If not passed the script will only be rendered in production environments.
      */
     enabled?: boolean
-    children?: ReactNode | ReactNode[]
     /**
      * Optionally override any of the props passed to the script element, including but not limited to Next.js Script props
      */
@@ -25,6 +24,7 @@ export default function CloudflareWebAnalyticsProvider(props: {
         React.ScriptHTMLAttributes<HTMLScriptElement>,
         HTMLScriptElement
     >
+    children?: ReactNode | ReactNode[]
 }) {
     const {
         enabled = process.env.NODE_ENV === 'production' &&
