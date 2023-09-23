@@ -19,14 +19,6 @@ export default function CloudflareWebAnalyticsProvider(props: {
      * rendered in production environments.
      */
     enabled?: boolean
-    /**
-     * Optionally override any of the default props the script element uses, including but not limited to
-     * Next.js Script props.
-     */
-    scriptProps?: React.DetailedHTMLProps<
-        React.ScriptHTMLAttributes<HTMLScriptElement>,
-        HTMLScriptElement
-    >
     children?: ReactNode | ReactNode[]
 }) {
     const {
@@ -45,7 +37,6 @@ export default function CloudflareWebAnalyticsProvider(props: {
                     ]
                         .filter(Boolean)
                         .join('&')}`}
-                    {...props.scriptProps}
                 />
             )}
             {props.children}
