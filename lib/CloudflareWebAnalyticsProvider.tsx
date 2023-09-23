@@ -10,15 +10,18 @@ export default function CloudflareWebAnalyticsProvider(props: {
      */
     token: string
     /**
-     * Set this to true to disable measuring SPA's as described in https://developers.cloudflare.com/analytics/web-analytics/getting-started/web-analytics-spa/
+     * Set this to true to disable measuring SPA's as described in
+     * https://developers.cloudflare.com/analytics/web-analytics/getting-started/web-analytics-spa/
      */
     spaIsDisabled?: boolean
     /**
-     * Use this to explicitly decide whether to render script. If not passed the script will only be rendered in production environments.
+     * Use this to explicitly decide whether to render script. If not passed the script will only be
+     * rendered in production environments.
      */
     enabled?: boolean
     /**
-     * Optionally override any of the props passed to the script element, including but not limited to Next.js Script props
+     * Optionally override any of the default props the script element uses, including but not limited to
+     * Next.js Script props.
      */
     scriptProps?: React.DetailedHTMLProps<
         React.ScriptHTMLAttributes<HTMLScriptElement>,
