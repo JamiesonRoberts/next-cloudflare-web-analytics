@@ -12,13 +12,13 @@ analytics and performance metrics service.
 
 ## Usage
 
-### `CloudflareWebAnalyticsProvider` Props
+### Installation
 
-| Name          | Type    | Description                                                                                                                                                                                      |
-|---------------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| token         | string  | The token provided by Cloudflare Web Analytics of the site you want to monitor. **Required**                                                                                                     |
-| spaIsDisabled | boolean | Set this to `true` to disable Cloudflare Web Analytics [Single Page Application measurements](https://developers.cloudflare.com/analytics/web-analytics/getting-started/web-analytics-spa/).     |
-| enabled       | boolean | Use this to explicitly decide whether or not to render script. If not passed the script will be rendered in production environments only based on either `NODE_ENV` or `NEXT_PUBLIC_VERCEL_ENV`. |
+`npm install next-cloudflare-web-analytics --save`
+
+or
+
+`yarn add next-cloudflare-web-analytics`
 
 ### App Router Implementation
 
@@ -58,6 +58,14 @@ export default function MyApp({Component, pageProps}) {
   )
 }
 ```
+
+### Props for `CloudflareWebAnalyticsProvider`
+
+| Name          | Type    | Description                                                                                                                                                                                      |
+|---------------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| token         | string  | The token provided by Cloudflare Web Analytics of the site you want to monitor. **Required**                                                                                                     |
+| spaIsDisabled | boolean | Set this to `true` to disable Cloudflare Web Analytics [Single Page Application measurements](https://developers.cloudflare.com/analytics/web-analytics/getting-started/web-analytics-spa/).     |
+| enabled       | boolean | Use this to explicitly decide whether or not to render script. If not passed the script will be rendered in production environments only based on either `NODE_ENV` or `NEXT_PUBLIC_VERCEL_ENV`. |
 
 ## Developing
 
