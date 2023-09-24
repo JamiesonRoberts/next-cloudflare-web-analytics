@@ -9,7 +9,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "",
-    "build": "tsc --project ./tsconfig.json && rollup -c --bundleConfigAsCjs"
+    "build": "tsc --project ./tsconfig.json && rollup -c --bundleConfigAsCjs",
+    "watch": "tsc --project ./tsconfig.json && rollup -c -w --bundleConfigAsCjs"
   },
   "repository": {
     "type": "git",
@@ -22,7 +23,8 @@
     "analytics",
     "provider",
     "web analytics",
-    "simple analytics"
+    "simple analytics",
+    "privacy focused analytics"
   ],
   "author": "Jamieson Roberts <hello@jamiesonroberts.com>",
   "license": "GPL-3.0+",
