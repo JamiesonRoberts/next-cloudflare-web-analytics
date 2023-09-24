@@ -17,5 +17,5 @@ export default {
         },
     ],
     plugins: [typescript()],
-    external: [...Object.keys(pkg.peerDependencies)],
+    external: [...Object.keys(pkg.peerDependencies), 'next/script'],
 }
