@@ -1,6 +1,6 @@
 {
   "name": "next-cloudflare-web-analytics",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "files": [
     "dist"
   ],
@@ -9,7 +9,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "",
-    "build": "tsc --project ./tsconfig.json && rollup -c --bundleConfigAsCjs"
+    "build": "tsc --project ./tsconfig.json && rollup -c --bundleConfigAsCjs",
+    "watch": "tsc --project ./tsconfig.json && rollup -c -w --bundleConfigAsCjs"
   },
   "repository": {
     "type": "git",
@@ -22,7 +23,8 @@
     "analytics",
     "provider",
     "web analytics",
-    "simple analytics"
+    "simple analytics",
+    "privacy focused analytics"
   ],
   "author": "Jamieson Roberts <hello@jamiesonroberts.com>",
   "license": "GPL-3.0+",
@@ -37,6 +39,7 @@
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^11.1.3",
+    "@types/node": "^20.6.0",
     "@types/react": "^18.2.21",
     "prettier": "^3.0.3",
     "rollup": "^3.29.1",
