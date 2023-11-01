@@ -38,11 +38,11 @@
     "react-dom": "^17.0.0 || ^18.0.0"
   },
   "devDependencies": {
-    "@rollup/plugin-typescript": "^11.1.4",
-    "@types/node": "^20.8.0",
-    "@types/react": "^18.2.23",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "@types/node": "^20.8.10",
+    "@types/react": "^18.2.33",
     "prettier": "^3.0.3",
-    "rollup": "^3.29.4",
+    "rollup": "^4.2.0",
     "typescript": "^5.2.2"
   }
 }
