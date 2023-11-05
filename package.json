@@ -1,6 +1,6 @@
 {
   "name": "next-cloudflare-web-analytics",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "files": [
     "dist"
   ],
